@@ -1,4 +1,4 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include "timer.h"
 
 int get_duration(int start_sec, int end_sec) {
@@ -46,20 +46,20 @@ void process_stage(int start_sec, int end_sec, int track_length, int* current_be
     print_time_mm_ss(mins, secs);
 
     if (status == -1) {
-        printf(" [Дисквалификация]");
+        printf(" [Р”РёСЃРєРІР°Р»РёС„РёРєР°С†РёСЏ]");
     }
     else {
         if (is_dynamic_record(adjusted_duration, *current_best)) {
-            printf(" [Новый рекорд дня!]");
+            printf(" [РќРѕРІС‹Р№ СЂРµРєРѕСЂРґ РґРЅСЏ!]");
             *current_best = adjusted_duration;
         }
         else if (status == 1) {
-            printf(" [Рекорд!]");
+            printf(" [Р РµРєРѕСЂРґ!]");
         }
         else {
-            printf(" [Норма]");
+            printf(" [РќРѕСЂРјР°]");
         }
     }
     double speed = get_speed(track_length, adjusted_duration);
-    printf(" | Скорость: %.1f км/ч\n", speed);
+    printf(" | РЎРєРѕСЂРѕСЃС‚СЊ: %.1f РєРј/С‡\n", speed);
 }

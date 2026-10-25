@@ -1,4 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
+п»ї#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
@@ -12,10 +12,10 @@ int main() {
     setlocale(LC_ALL, "RUS");
     int task_choice;
 
-    printf("Выберите задание для запуска:\n");
-    printf("1 - Задача 10.1 (Вычисление функций)\n");
-    printf("2 - Система хронометража\n");
-    printf("Ваш выбор: ");
+    printf("Р’С‹Р±РµСЂРёС‚Рµ Р·Р°РґР°РЅРёРµ РґР»СЏ Р·Р°РїСѓСЃРєР°:\n");
+    printf("1 - Р—Р°РґР°С‡Р° 10.1 (Р’С‹С‡РёСЃР»РµРЅРёРµ С„СѓРЅРєС†РёР№)\n");
+    printf("2 - РЎРёСЃС‚РµРјР° С…СЂРѕРЅРѕРјРµС‚СЂР°Р¶Р°\n");
+    printf("Р’Р°С€ РІС‹Р±РѕСЂ: ");
     scanf("%d", &task_choice);
 
     if (task_choice == 1) {
@@ -28,32 +28,32 @@ int main() {
         int current_best = 0;
         int age_group;
 
-        printf("\n--- СИСТЕМА ХРОНОМЕТРАЖА ---\n");
-        printf("Введите длину трассы (в метрах): ");
+        printf("\n--- РЎРРЎРўР•РњРђ РҐР РћРќРћРњР•РўР РђР–Рђ ---\n");
+        printf("Р’РІРµРґРёС‚Рµ РґР»РёРЅСѓ С‚СЂР°СЃСЃС‹ (РІ РјРµС‚СЂР°С…): ");
         scanf("%d", &track_length);
 
         while (1) {
-            printf("\nВведите код спортсмена (или '!' для выхода): ");
+            printf("\nР’РІРµРґРёС‚Рµ РєРѕРґ СЃРїРѕСЂС‚СЃРјРµРЅР° (РёР»Рё '!' РґР»СЏ РІС‹С…РѕРґР°): ");
             scanf(" %c", &athlete_code);
 
             if (athlete_code == '!') break;
 
-            printf("Введите возрастную группу (1-дети, 2-взрослые, 3-ветераны): ");
+            printf("Р’РІРµРґРёС‚Рµ РІРѕР·СЂР°СЃС‚РЅСѓСЋ РіСЂСѓРїРїСѓ (1-РґРµС‚Рё, 2-РІР·СЂРѕСЃР»С‹Рµ, 3-РІРµС‚РµСЂР°РЅС‹): ");
             scanf("%d", &age_group);
 
-            printf("Введите время старта (в секундах): ");
+            printf("Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ СЃС‚Р°СЂС‚Р° (РІ СЃРµРєСѓРЅРґР°С…): ");
             scanf("%d", &start_sec);
 
-            printf("Введите время финиша (в секундах): ");
+            printf("Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ С„РёРЅРёС€Р° (РІ СЃРµРєСѓРЅРґР°С…): ");
             scanf("%d", &end_sec);
 
-            printf("Спортсмен %c: ", athlete_code);
+            printf("РЎРїРѕСЂС‚СЃРјРµРЅ %c: ", athlete_code);
             process_stage(start_sec, end_sec, track_length, &current_best, age_group);
         }
-        printf("\nСоревнования завершены!\n");
+        printf("\nРЎРѕСЂРµРІРЅРѕРІР°РЅРёСЏ Р·Р°РІРµСЂС€РµРЅС‹!\n");
     }
     else {
-        printf("Неверный выбор.\n");
+        printf("РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ.\n");
     }
 
     return 0;
@@ -79,8 +79,8 @@ double fc(double x) {
 int zad10_1() {
     double x;
     int choice;
-    printf("\n--- Задача 10.1 ---\n");
-    printf("Введите значение x: ");
+    printf("\n--- Р—Р°РґР°С‡Р° 10.1 ---\n");
+    printf("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ x: ");
     scanf("%lf", &x);
 
     double val_a = fa(x);
@@ -90,14 +90,14 @@ int zad10_1() {
     double diff_squares = (val_a * val_a) - (val_b * val_b) - (val_c * val_c);
     double double_sum = 2.0 * (val_a + val_b + val_c);
 
-    printf("\n--- МЕНЮ ---\n");
-    printf("1 - Значение функции F1(x)\n");
-    printf("2 - Значение функции F2(x)\n");
-    printf("3 - Значение функции F3(x)\n");
-    printf("4 - Произведение F1(x) * F2(x) * F3(x)\n");
-    printf("5 - Разность квадратов F1^2(x) - F2^2(x) - F3^2(x)\n");
-    printf("6 - Удвоенная сумма 2 * (F1(x) + F2(x) + F3(x))\n");
-    printf("Ваш выбор: ");
+    printf("\n--- РњР•РќР® ---\n");
+    printf("1 - Р—РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё F1(x)\n");
+    printf("2 - Р—РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё F2(x)\n");
+    printf("3 - Р—РЅР°С‡РµРЅРёРµ С„СѓРЅРєС†РёРё F3(x)\n");
+    printf("4 - РџСЂРѕРёР·РІРµРґРµРЅРёРµ F1(x) * F2(x) * F3(x)\n");
+    printf("5 - Р Р°Р·РЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РѕРІ F1^2(x) - F2^2(x) - F3^2(x)\n");
+    printf("6 - РЈРґРІРѕРµРЅРЅР°СЏ СЃСѓРјРјР° 2 * (F1(x) + F2(x) + F3(x))\n");
+    printf("Р’Р°С€ РІС‹Р±РѕСЂ: ");
     scanf("%d", &choice);
     printf("\n");
 
@@ -112,16 +112,16 @@ int zad10_1() {
         printf("F3(x) = %lf\n", val_c);
         break;
     case 4:
-        printf("Произведение: %lf\n", mult);
+        printf("РџСЂРѕРёР·РІРµРґРµРЅРёРµ: %lf\n", mult);
         break;
     case 5:
-        printf("Разность квадратов: %lf\n", diff_squares);
+        printf("Р Р°Р·РЅРѕСЃС‚СЊ РєРІР°РґСЂР°С‚РѕРІ: %lf\n", diff_squares);
         break;
     case 6:
-        printf("Удвоенная сумма: %lf\n", double_sum);
+        printf("РЈРґРІРѕРµРЅРЅР°СЏ СЃСѓРјРјР°: %lf\n", double_sum);
         break;
     default:
-        printf("Неверный выбор.\n");
+        printf("РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ.\n");
     }
     return 0;
 }
